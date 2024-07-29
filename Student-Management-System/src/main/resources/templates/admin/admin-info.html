@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="eng" xlmns:th="http://www.thymeleaf.org">
+
+<head>
+	<title>Admin Info</title>
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	 
+	<link rel="stylesheet" th:href="@{/css/navbar.css}">
+	
+	<link rel="stylesheet" th:href="@{/css/admin/admin-info.css}">
+	
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	
+</head>
+
+<body>
+	
+	<!-- Navbar links -->
+	<div class="collapse navbar-collapse" id="collapsibleNavbar">
+	    <ul class="navbar-nav">
+	      <li class="nav-item">
+	        <a class="nav-link" th:href="@{/students}">Student Management</a>
+	      </li>
+	      <li class="nav-item">
+	        <a class="nav-link" th:href="@{/teachers}">Teacher Management</a>
+	      </li>
+	      <li class="nav-item">
+	        <a class="nav-link" th:href="@{/courses}">Course Management</a>
+	      </li>
+	         <li class="nav-item">
+	        <a class="nav-link" th:href="@{/admin}">Admin Management</a>
+	      </li>
+	    </ul>
+	  </div>
+	</nav>
+	
+	<div class="vertical-navbar">
+		<ul>
+			<li><a th:href="@{/admin/adminPanel}"><i class="fa fa-home fa-navbar"></i><span>Dashboard</span></a></li>
+			<li><a th:href="@{/admin/courses}"><i class="fa fa-pencil fa-navbar"></i><span>Courses</span></a></li>
+			<li><a th:href="@{/admin/students}"><i class="fa fa-user fa-navbar"></i><span>Students</span></a></li>
+			<li><a th:href="@{/admin/teachers}"><i class="fa fa-user-secret fa-navbar"></i><span>Teachers</span></a></li>
+			<li><a th:href="@{/admin/showSearchPage}"><i class="fa fa-calendar fa-navbar"></i><span>Reports</span></a></li>
+			<li><a th:href="@{/admin/showSearchPage2}"><i class="fa fa-calendar fa-navbar"></i><span>Reports2</span></a></li>
+			<li><a th:href="@{/admin/showSearchPage3}"><i class="fa fa-calendar fa-navbar"></i><span>Reports3</span></a></li>
+			<li><a th:href="@{/admin/showSearchPage4}"><i class="fa fa-calendar fa-navbar"></i><span>Reports4</span></a></li>
+			<li><a th:href="@{/admin/adminInfo}"><i class="fa fa-info-circle fa-navbar"></i><span>Info</span></a></li>
+		</ul>
+	</div>
+	
+	
+	
+	<div class="content">
+	
+		<h3>Admin Info</h3>
+		<div class="card-container">
+		<div class="card">
+			<div>
+				<i class="fa fa-pencil"></i>
+				<span>Courses:</span>
+				<span th:text="${courseSize}"></span>
+			</div>
+		</div>
+		
+		<div class="card" id="students">
+			<div>
+				<i class="fa fa-user"></i>
+				<span>Students:</span>
+				<span th:text="${studentSize}"></span>
+			</div>
+		</div>
+		
+		
+		<div class="card" id="teachers">
+			<div>
+				<i class="fa fa-user-secret"></i>
+				<span>Teachers:</span>
+				<span th:text="${teacherSize}"></span>
+			</div>
+		</div>
+		
+		
+		<!-- <p>
+            We have a total of <span th:text="${courses.size()}"></span>
+            courses in this world. Following is a list showing their count
+            based on the number of type course.
+        </p>   -->
+
+		<ol>
+         		 <li th:text="'Count of Main Course Type  -   ' + ${mainTypeCount}"></li>
+         		 <li th:text="'Count of Secondary Course Type  -   ' + ${secondaryTypeCount}"></li>          
+        </ol>
+		
+		</div>
+	</div>
+
+</body>
+
+</html>

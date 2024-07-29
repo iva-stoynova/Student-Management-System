@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Implementation-Title: student-management-system
+Implementation-Version: 0.0.1-SNAPSHOT
+Built-By: Iwa Stojnowa
+Implementation-Vendor-Id: net.studentmanagementsystem
+Build-Jdk: 1.8.0_144
+Implementation-URL: https://spring.io/projects/spring-boot/Student-Man
+ agement-System
+Created-By: Maven Integration for Eclipse
+

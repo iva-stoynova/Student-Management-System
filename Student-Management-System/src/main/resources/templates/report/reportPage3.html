@@ -1,0 +1,28 @@
+<form th:action="@{/admin/search3}" method="post">
+        
+      <select th:name="courseType">
+            <option value="">Select type of course</option>
+            <option th:each="r : ${myModel.typeList}"
+                    th:value="${r.type}"
+                    th:text="${r.type}"
+                    th:selected="${courseType != null 
+                    and courseType.equals(r)}">
+            </option>
+      </select>  
+
+     <select th:name="name">
+            <option value="">Select to see which students participate in specific group</option>
+            <option th:each="t : ${myModel.categoryList}"
+                    th:value="${t.id +':'+ t.name}"
+                    th:text="${'Godina  ' + t.id +':'+ 'Grupa   '+ t.name}"> 
+            </option>
+      </select>        
+
+           
+       <button type="submit">Show</button>
+ 
+</form>
+
+
+       
+       
