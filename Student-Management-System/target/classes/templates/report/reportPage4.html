@@ -1,0 +1,21 @@
+<form th:action="@{/admin/search4}" method="post">
+        
+      <select class="form-control" id="task" name="task">
+            <option value="">Select to see which students participate in specific course</option>
+            <option th:each="t : ${myModel.courseSearched}"
+                    th:value="${t.id}"
+                    th:text="${t.name}"
+                    th:selected="${task != null 
+                    and task.equals(t)}">
+            </option>
+      </select>      
+       
+       <input type="text" id="age" name="age" th:selected="${age != 0 and not #strings.isEmpty(age)}" />  
+                      
+            </option> 
+      </select>     
+
+       <button type="submit">Show</button>
+ 
+</form>
+

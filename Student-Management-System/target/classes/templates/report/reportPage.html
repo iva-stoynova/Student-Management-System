@@ -1,0 +1,15 @@
+<form th:action="@{/admin/search}" method="post">
+        
+      <select class="form-control" id="task" name="task">
+            <option value="">Select to see which students participate in specific course</option>
+            <option th:each="t : ${tasks}"
+                    th:value="${t.id}"
+                    th:text="${t.name}"
+                    th:selected="${task != null 
+                    and task.equals(t)}">
+            </option>
+      </select>      
+   
+       <button type="submit">Show</button>
+ 
+</form>
