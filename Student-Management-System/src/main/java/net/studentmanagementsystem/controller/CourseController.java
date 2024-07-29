@@ -97,7 +97,7 @@ public class CourseController {
 			existingCourse.setAcademicYear(theCourse.getAcademicYear());
 			
 			Teacher teacher = teacherService.getTeacherById(teacherId);
-			existingCourse.setTeacher(teacher); //theCourse.getTeacher());
+			existingCourse.setTeacher(teacher);
 		
 			courseService.updateCourse(existingCourse);
 			return "redirect:/courses";		
